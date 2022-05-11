@@ -1,0 +1,47 @@
+:root {
+  // example
+  --color-100: red;
+  --color-90: black;
+
+  --ab-main-text-color: #333333;
+  --ab-main-content-background-color: #fff;
+  --ab-main-gray-text-color: #A1A0A0;
+  --ab-content-gray-bg-color: #F6F7FD;
+
+  // page
+  --ab-page-padding: 16px;
+  --ab-page-container-background-color: #fbfcff;
+
+  // nav
+  --ab-nav-background-color: #FFFFFF;
+  --ab-nav-height: 50px;
+  --ab-nav-normal-color: #A1A0A0;
+  --ab-nav-active-color: #333333;
+
+  // button
+  --ab-button-main-color: #486BF6;
+  --ab-button-main-text-color: #486BF6;
+  --ab-button-gray-color: #F6F7FD;
+  --ab-button-gray-text-color: #B8BBC3;
+  //--ba-button-gray
+
+  --ab-cell-title-color: #333333;
+  --ab-cell-label-color: #B8BBC3;
+
+  // content
+  --ab-content-padding: 10px;
+
+  --ab-text-warning: #FF9F3D;
+  --ab-text-success: #33E264;
+  --ab-text-cancel: #FF6666;
+
+  // change default vant ui
+  --van-tabs__line: blue;
+  --van-tabs-bottom-bar-width: 20px;
+  --van-tabs-bottom-bar-height: 4px;
+
+}
+
+:root[theme='dark'] {
+
+}

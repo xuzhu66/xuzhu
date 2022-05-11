@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bei {
+    width: 1280px;
+    height: 500px;
+    background-color: aqua;
+    /* overflow: hidden; */
+}
+
+.zuo {
+    float: left;
+    width: 400px;
+    height: 500px;
+    background-color: antiquewhite;
+}
+
+.you {
+    list-style: none;
+    float: left;
+    width: 880px;
+    height: 500px;
+    background-color: darkseagreen;
+}
+
+.you li {
+    float: left;
+    width: 210px;
+    height: 245px;
+    background-color: forestgreen;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <button>确定发送</button>
+    <script>
+        var shuru = document.querySelector('input');
+        var dianji = document.querySelector('button');
+        var djss = 60;
+        var uu = null;
+        dianji.addEventListener('click', function() {
+            var djss = 2;
+            var qwe = 0;
+
+            fff();
+
+            function fff() {
+                var zxc = djss - qwe;
+                qwe++;
+                dianji.setAttribute("disabled", true);
+                dianji.innerHTML = zxc + '秒后可再次点击';
+            }
+            var uu = setInterval(fff, 1000)
+
+            function tingzhi() {
+                clearInterval(uu);
+                dianji.removeAttribute("disabled");
+                dianji.innerHTML = '确定发送';
+            }
+
+            setTimeout(tingzhi, 3000)
+        })
+    </script>
+</body>
+
+</html>

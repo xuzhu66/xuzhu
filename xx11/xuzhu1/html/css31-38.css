@@ -1,0 +1,20 @@
+ul li:nth-child(-n+4) {
+    color: #f40;
+}
+
+
+/* div span:first-of-type {
+    color: #f40;
+}
+
+div span:last-of-type {
+    color: rgb(20, 216, 13);
+}
+
+div span:nth-of-type(2) {
+    color: rgb(0, 17, 250);
+} */
+
+div {
+    transform: translate(100px, 100px);
+}

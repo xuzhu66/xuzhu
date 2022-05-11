@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="v-on" x="dolt">
+        <input type="button" value="v-on" v-on:monseenter="dolt">
+        <input type="button" value="v-on" v-on:dblclick="dolt">
+        <input type="button" value="@" @dblclick="dolt">
+        <h2 @click="changeFood">{{food}}</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                food: '牛排🥩'
+            },
+            methods: {
+                dolt: function() {
+                    alert('zuoit')
+                },
+                changeFood: function() {
+                    // this.zxc += "好吃"
+                    this.food += "haochi"
+                },
+            }
+        })
+    </script>
+
+</body>
+
+</html>

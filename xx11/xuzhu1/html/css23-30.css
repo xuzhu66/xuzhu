@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    position: relative;
+    width: 990px;
+    height: 460px;
+    border: 1px solid black;
+    margin: 10px auto;
+    background: no-repeat center/125% url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/dd741adcce9417d72ea4c1a6dfcc96e2.jpg?thumb=1&w=2452&h=920&f=webp&q=90);
+}
+
+.a,
+.b {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 40px;
+    background: rgba(250, 250, 250, 0.3);
+    line-height: 40px;
+    text-align: center;
+    color: #000;
+}
+
+.a {
+    margin-top: -20px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.b {
+    right: 0px;
+    margin-top: -20px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}

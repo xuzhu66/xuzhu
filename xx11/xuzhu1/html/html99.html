@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style> -->
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="qwe">
+        <input type="text" id="asd">
+        <input type="button" value="提交" id="zxc">
+    </form>
+
+    <script>
+        var zh = document.getElementById('qwe');
+        var mm = document.getElementById('asd');
+        var tj = document.getElementById('zxc');
+        tj.addEventListener('click', function() {
+                var xhr = new XMLHttpRequest();
+                var aa = zh.value;
+                var bb = mm.value;
+                // alert(aa);
+                // alert(bb);
+                var params = 'username=' + aa + '&age=' + bb;
+                xhr.open('get', 'http://localhost:8000/tj?' + params);
+
+                xhr.send();
+                xhr.onload = function() {
+                    console.log(xhr.responseText);
+                    var ppp = JSON.parse(xhr.responseText);
+                    console.log(ppp);
+                }
+            })
+            //原始注册事件
+            // tj.onclick = function() {
+            //         var aa = zh.value;
+            //         var bb = mm.value;
+            //         alert(aa);
+            //         alert(bb);
+            //     }
+
+
+
+
+
+
+
+        // var xhr = new XMLHttpRequest();
+        // xhr.open('get', 'http://localhost:8000/asd')
+        // xhr.send();
+        // xhr.onload = function() {
+        //     console.log(xhr.responseText);
+        // }
+        // var xhb = new XMLHttpRequest();
+        // xhb.open('get', 'http://localhost:8000/abc')
+        // xhb.send();
+        // xhb.onload = function() {
+
+        //     console.log(xhb.responseText);
+        //     var ppp = JSON.parse(xhb.responseText)
+        //     console.log(ppp);
+        //     var qwe = '<h2>' + ppp.age + '<h2>'
+        //     document.body.innerHTML = qwe;
+    </script>
+</body>
+
+</html>

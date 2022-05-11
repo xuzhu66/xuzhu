@@ -1,0 +1,32 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+/* div.demo1{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(8, 235, 27);
+    position:fixed;
+    top: 500px;
+    left: 500px;
+    
+}
+div.demo2{
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgb(236, 9, 28);
+    background-color: brown;
+   
+} */
+div{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+    text-align: center;
+    
+}

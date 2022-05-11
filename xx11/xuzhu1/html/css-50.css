@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../html/点/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div.ddb {
+    width: 100%;
+    height: 100%;
+    min-width: 390px;
+    /* max-width: 640px; */
+}
+
+div.s {
+    position: relative;
+    width: 100%;
+    height: 405px;
+    background: url(../html/bg-t.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+h2 {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 400;
+}
+
+div.siban {
+    width: 100%;
+    text-align: center;
+    padding-top: 90px;
+}
+
+div span {
+    width: 100%;
+    font-size: 13px;
+    color: #fff;
+}
+
+div.z {
+    position: absolute;
+    top: 145px;
+    left: 40px;
+    width: 100%;
+    height: 900px;
+    background: url(../html/iphone.png) no-repeat;
+    background-size: 374px 674px;
+}
+
+div.x {
+    position: absolute;
+    bottom: 75px;
+    left: 100px;
+    width: 100%;
+    height: 200px;
+    background: url(../html/bg-f.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+div.v {
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+    width: 100%;
+    height: 200px;
+    background: url(../html/ball.png) no-repeat;
+    background-size: 220px 128px;
+}
+
+div.xz {
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    bottom: 0px;
+    background: url(../html/footbg.png) no-repeat;
+    background-size: 389px 80px;
+}
+
+div.xz div.lk {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 51%;
+    height: 75px;
+}
+
+div.xz span.logo {
+    margin: 10px 0px 0px 30px;
+    width: 60px;
+    height: 60px;
+    background: url(../html/logo.png) no-repeat;
+}
+
+div.xz div.lk div.r {
+    width: 55%;
+    height: 60px;
+    padding-top: 5px;
+}
+
+div.xz div.lk div.r h3 {
+    font-weight: 350;
+    font-size: 20px;
+}
+
+div.xz div.lk div.r p {
+    font-size: 13px;
+    color: #B8BBC3;
+}
+
+div.xz div.yk {
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    right: 10px;
+    top: 15px;
+}
+
+div.xz div.yk a {
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    right: 0px;
+    background: url(../html/button.png) no-repeat;
+    background-size: 130px 40px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 40px;
+    text-align: center;
+}
+
+@keyframes abcd {
+    0% {
+        ransform: translate(10px, 10px);
+    }
+    100% {
+        transform: translate(15px, 15px);
+    }
+}
+
+@keyframes abcde {
+    0% {
+        transform: translate(10px, 3px);
+    }
+    50% {
+        transform: translate(15px, 10px);
+    }
+    75% {
+        transform: translate(1px, 10px);
+    }
+    100% {
+        transform: translate(10px, 3px);
+    }
+}
+
+span.piaofu1 {
+    position: absolute;
+    top: 235px;
+    left: 60px;
+    width: 66px;
+    height: 66px;
+    background: url(../html/pao1.png) no-repeat;
+    z-index: 1;
+    animation: abcd 1.2s linear alternate infinite;
+}
+
+span.piaofu2 {
+    position: absolute;
+    top: 600px;
+    left: 30px;
+    width: 55px;
+    height: 55px;
+    background: url(../html/pao4.png) no-repeat;
+    z-index: 1;
+    animation: abcde 4s linear infinite;
+}
+
+span.piaofu3 {
+    position: absolute;
+    top: 128px;
+    left: 300px;
+    width: 55px;
+    height: 55px;
+    background: url(../html/pao2.png) no-repeat;
+    z-index: 1;
+    animation: abcd 2s linear alternate infinite;
+}
+
+span.piaofu4 {
+    position: absolute;
+    top: 600px;
+    left: 280px;
+    width: 93px;
+    height: 93px;
+    background: url(../html/pao3.png) no-repeat;
+    z-index: 1;
+    animation: abcde 4s linear infinite;
+}

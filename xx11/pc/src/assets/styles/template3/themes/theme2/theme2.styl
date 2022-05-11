@@ -1,0 +1,9 @@
+@import "../color.styl"; //引入配置
+@import "homePage.styl"; //引入页面配置
+@import "centerPage.styl"; //引入页面配置
+
+root = {
+  name: "theme2", //主题标识
+}
+
+theme2 = extend(root, homePage, centerPage)

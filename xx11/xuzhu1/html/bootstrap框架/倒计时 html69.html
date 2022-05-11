@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+        }
+        
+        span {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="shi">1</span>
+        <span class="fen">2</span>
+        <span class="miao">3</span>
+    </div>
+    <script>
+        var shi = document.querySelector('.shi');
+        var fen = document.querySelector('.fen');
+        var miao = document.querySelector('.miao');
+        var b = +new Date('2022-4-18 19:00:00'); //返回的是用户输入时间的毫秒数
+        shijian();
+        window.setInterval(shijian, 1000)
+
+        function shijian() {
+            var a = +new Date(); //返回的是当前时间的总毫秒数
+            var c = (b - a) / 1000; //c是剩余时间的总秒数（除了1000得秒）
+            var d = parseInt(c / 60 / 60 % 24) //时
+            d = d < 10 ? '0' + d : d;
+            shi.innerHTML = d; //把剩余的小时给小时盒子
+            var e = parseInt(c / 60 % 60) //分
+            e = e < 10 ? '0' + e : e;
+            fen.innerHTML = e;
+            var f = parseInt(c % 60) //秒
+            f = f < 10 ? '0' + f : f;
+            miao.innerHTML = f;
+        }
+    </script>
+</body>
+
+</html>

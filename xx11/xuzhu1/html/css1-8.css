@@ -1,0 +1,16 @@
+div{
+    background-color: brown;
+}
+#demo{
+    background-color: aquamarine;
+}
+
+*{
+    background-color: yellowgreen;
+}
+[class="demo1"]{
+    background-color: rgb(230, 20, 20);
+}
+.demo1{
+    background-color: blueviolet;
+}

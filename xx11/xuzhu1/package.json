@@ -1,0 +1,21 @@
+{
+    "name": "xuzhu1",
+    "version": "1.0.0",
+    "description": "",
+    "main": "js-60.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon ./html/js-59.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.0",
+        "express": "^4.18.0",
+        "nodemon": "^2.0.15"
+    },
+    "devDependencies": {
+        "cors": "^2.8.5",
+        "path": "^0.12.7"
+    }
+}

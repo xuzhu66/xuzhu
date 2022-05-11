@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#p {
+    width: 600px;
+    margin: 10px auto;
+}
+
+#p::before,
+#p:after {
+    content: "";
+    display: block;
+}
+
+#p:after {
+    clear: both;
+}
+
+#P {
+    *zoom: 1;
+}
+
+.a,
+.b {
+    width: 300px;
+    height: 200px;
+    background-color: burlywood;
+}
+
+.a {
+    float: left;
+}
+
+.b {
+    float: left;
+}
+
+.c {
+    height: 300px;
+    background-color: burlywood;
+    background-image: url(https://pic.qqtn.com/up/2019-9/15690311636958128.jpg);
+}
+
+.ggb {
+    height: 42px;
+    line-height: 42px;
+    color: #000;
+    text-decoration: none;
+}
+
+.ggb:hover {
+    color: #f40;
+    border-bottom: 2px solid blue;
+}

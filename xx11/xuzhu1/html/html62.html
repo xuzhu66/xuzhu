@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        div {
+            display: flex;
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        span {
+            width: 10px;
+            height: 10px;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            margin: 5px;
+            transform: rotateZ(46deg);
+        }
+        
+        ul {
+            display: none;
+        }
+        
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 50px;
+            border: 1px solid rgb(207, 143, 4);
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>微博 <span></span></div>
+    <ul>
+        <li>
+            <a href="https://translate.google.cn/?sl=auto&tl=zh-CN&op=translate">私信</a>
+        </li>
+        <li>评论</li>
+        <li>@我</li>
+    </ul>
+    <script>
+        // var ui = document.querySelector('div');
+        // var uu = document.querySelector('ul');
+        // ui.onmouseover = function() {
+        //     uu.style.display = 'block';
+        //     ui.style.backgroundColor = 'yellowgreen';
+        //     // uu.style.backgroundColor = 'orange';
+        // }
+        // uu.onmouseout = function() {
+        //     uu.style.display = 'none';
+        //     ui.style.backgroundColor = 'White';
+
+        // }
+        var ui = document.querySelector('div');
+        var uu = document.querySelector('ul');
+        var lis = uu.children;
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function() {
+                this.children[1].style.display = 'block';
+            }
+            lis[i].onmouseover = function() {
+                this.children[1].style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

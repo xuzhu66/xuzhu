@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+.Dhl1{
+    list-style: none;
+    
+}
+.Dhl{
+    float: left;
+    margin-left: 10px;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    height: 30px;
+    width: 80px;
+    line-height: 35px;
+     
+}
+a{
+    text-decoration:none;
+    display: inline-block;
+    height: 30px;
+    width: 70px;
+    border-radius: 15px;
+    text-align:center;
+    color: #f40;
+    font-weight:bolder;
+    font-size: 17;
+    padding: 0px 5px;
+      
+}
+a:hover{
+    background-color: #f40;
+    color:#fff;
+}
+ul::after{
+    content:"";
+    display: block;
+    clear: both;
+}

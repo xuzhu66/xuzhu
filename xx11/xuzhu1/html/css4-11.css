@@ -1,0 +1,9 @@
+div{
+    border: 100px solid black;
+    height: 0px;
+    width: 0px;
+    border-top-color: yellow;
+    border-left-color: blue;
+    border-right-color: olivedrab;
+    /* 透明色：transparent */
+}

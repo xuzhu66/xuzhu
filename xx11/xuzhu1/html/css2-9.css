@@ -1,0 +1,13 @@
+div.demo{
+    background-color: brown;
+}
+p{
+    background-color: blue;
+}
+div{
+    background-color: cadetblue;
+}
+div,p{
+    width: 100px;
+    height: 100px;
+}

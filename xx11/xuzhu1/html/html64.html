@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        body {
+            background-color: black;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <button>开关</button>
+    <script>
+        var abc = document.querySelector('button');
+        var cdb = document.querySelector('body');
+        var flg = 0;
+        abc.onclick = function() {
+            if (flg = 0) {
+                //     cdb.style.backgroundColor = 'black';
+                document.body.style.backgroundColor = 'black';
+                flg += 1;
+            }
+
+        }
+        abc.onclick = function() {
+            if (flg = 1) {
+                //     cdb.style.backgroundColor = 'White';
+                document.body.style.backgroundColor = 'White';
+                flg = 0;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+        }
+        
+        a.a {
+            position: absolute;
+            width: 25px;
+            height: 50px;
+            border: 1px solid black;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+        
+        a.b {
+            position: absolute;
+            width: 25px;
+            height: 50px;
+            border: 1px solid black;
+            right: 0px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+        
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <img v-bind:src="imgarr[index]" alt="">
+        <a class="a" href="#" v-if="index!=0" v-on:click="zou">zou</a>
+        <a class="b" href="#" v-show="index<imgarr.length-1" v-on:click="you">you</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                imgarr: ["../html/恐龙.webp", "../html/委屈.webp", "../html/嗯.webp", "../html/汗.webp"],
+                index: 0,
+            },
+            methods: {
+                zou: function() {
+                    this.index--;
+                },
+                you: function() {
+                    this.index++;
+
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

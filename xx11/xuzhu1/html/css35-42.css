@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes daxiao {
+    0% {
+        transform: scale(1.1);
+    }
+    /* 50% {
+        transform: scale(1.4);
+    } */
+    100% {
+        transform: scale(1.4);
+    }
+}
+
+.yy {
+    box-shadow: 0 0 10px red;
+}
+
+div .b {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    /* border: 2px solid red; */
+    z-index: 1;
+    top: 220px;
+    left: 550px;
+    border-radius: 50%;
+    animation: daxiao 1.5s infinite;
+}
+
+div .c {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    /* border: 2px solid red; */
+    z-index: 1;
+    top: 225px;
+    left: 555px;
+    border-radius: 50%;
+    animation: daxiao 1.5s infinite;
+}
+
+div .d {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    z-index: 1;
+    top: 230px;
+    left: 560px;
+    border-radius: 50%;
+    animation: daxiao 1s infinite;
+}
+
+div .e {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    /* border: 2px solid red; */
+    z-index: 1;
+    top: 320px;
+    left: 350px;
+    border-radius: 50%;
+    animation: daxiao 1.5s infinite;
+}
+
+div .f {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    /* border: 2px solid red; */
+    z-index: 1;
+    top: 325px;
+    left: 355px;
+    border-radius: 50%;
+    animation: daxiao 1.5s infinite;
+}
+
+div .g {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    z-index: 1;
+    top: 330px;
+    left: 360px;
+    border-radius: 50%;
+    animation: daxiao 1s infinite;
+}
+
+div .h {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    /* border: 2px solid red; */
+    z-index: 1;
+    top: 440px;
+    left: 500px;
+    border-radius: 50%;
+    animation: daxiao 1.5s infinite;
+}
+
+div .i {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    /* border: 2px solid red; */
+    z-index: 1;
+    top: 445px;
+    left: 505px;
+    border-radius: 50%;
+    animation: daxiao 1.5s infinite;
+}
+
+div .j {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: red;
+    z-index: 1;
+    top: 450px;
+    left: 510px;
+    border-radius: 50%;
+    animation: daxiao 1s infinite;
+}
+
+img {
+    position: relative;
+    width: 700px;
+    height: 700px;
+}

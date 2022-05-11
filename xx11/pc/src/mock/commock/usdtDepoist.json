@@ -1,0 +1,17 @@
+{
+    "code": 200,
+    "success": true,
+    "data": {
+        "createTime": "2021-06-23 02:49:06",
+        "orderAmt": 510,
+        "virOrderAmt": 79.316,
+        "currency": "CNY",
+        "virCurrency": "USDT-TRC20",
+        "protocol": "TRC20",
+        "unitPrice": 6.43,
+        "recAcctNo": "TCmXF4dy3w9tvnujW941epsqRJyCcA2Yd7",
+        "orderDepositId": "1406654812389343234",
+        "payTypeGroupName": "虚拟币充值"
+    },
+    "msg": "操作成功"
+}

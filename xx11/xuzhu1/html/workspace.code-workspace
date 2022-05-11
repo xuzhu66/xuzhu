@@ -1,0 +1,11 @@
+{
+    "folders": [
+		{
+			"name": "xx11",
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"cssrem.rootFontSize": 75
+	}
+}

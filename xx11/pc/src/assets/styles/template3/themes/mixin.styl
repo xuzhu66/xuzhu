@@ -1,0 +1,126 @@
+@import "themes.styl"; //引入配置
+
+// 背景色
+bg_color($color)
+    //默认样式（任意选择一个主题即可注意要和下面的默认主题一致）
+    background-color: theme1[$color];
+    for item in themeList
+        //判断html的data-theme的属性值，{}是Stylus插值
+        [data-theme = {item.name}] & {
+            //这里的item可以当作一个对象，item[$color]可表示为：对象名.属性
+            background-color: item[$color];
+        }
+
+// 字体颜色
+font_color($color)
+    color: theme1[$color];
+    for item in themeList
+        [data-theme = {item.name}] & {
+            color: item[$color];
+        }
+
+
+// border 所有
+border_all($num, $borderType, $color)
+    border: $num $borderType $color
+    for item in themeList
+        [data-theme = {item.name}] & {
+            border: $num $borderType item[$color];
+        }
+
+// 上下左右边框
+border_type($type, $num, $borderType, $color)
+    border-{$type}: $num $borderType $color
+    for item in themeList
+        [data-theme = {item.name}] & {
+            border-{$type}: $num $borderType item[$color]
+        }
+
+// 通用border
+border_com($num, $borderType, $color, $type = false)
+    if $type in (top bottom left right)
+        border_type($type, $num, $borderType, $color)
+    else
+        border_all($num, $borderType, $color)
+
+// 阴影
+//box_shadow(offset-x offset-y blur spread color position = false)
+box_shadow($shadow)
+    for item in themeList
+        [data-theme = {item.name}] & {
+            box-shadow: item[$shadow]
+        }
+
+// 渐变背景
+bg_img_linear()
+    if length(arguments) == 2
+        for item in themeList
+            [data-theme = {item.name}] & {
+                background-image: item[arguments[0]], item[arguments[1]]
+            }
+    else
+        for item in themeList
+            [data-theme = {item.name}] & {
+                background-image: item[arguments[0]]
+            }
+
+// border渐变边框
+border_img_linear()
+    if length(arguments) == 2
+        for item in themeList
+            [data-theme = {item.name}] & {
+                border-image: item[arguments[0]], item[arguments[1]]
+                border-image-slice: 10
+                border: 1px solid
+            }
+    else
+        for item in themeList
+            [data-theme = {item.name}] & {
+                border-image: item[arguments[0]]
+                border-image-slice: 10
+                border: 1px solid
+            }
+
+// 上箭头
+triangle-top($w, $h, $color)
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 $w $h $w;
+    for item in themeList
+        [data-theme = {item.name}] & {
+            border-color: transparent transparent item[$color]transparent;
+        }
+
+// 下箭头
+triangle-down($w, $h, $color)
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $h $w 0 $w;
+    for item in themeList
+        [data-theme = {item.name}] & {
+            border-color: item[$color]transparent transparent transparent;
+        }
+
+// 右箭头
+triangle-right($w, $h, $color)
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $w 0 $w $h;
+    for item in themeList
+        [data-theme = {item.name}] & {
+            border-color: transparent transparent transparent item[$color];
+        }
+
+// 左箭头
+triangle-left($w, $h, $color)
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $w $h $w 0;
+    for item in themeList
+        [data-theme = {item.name}] & {
+            border-color: transparent item[$color]transparent transparent;
+        }

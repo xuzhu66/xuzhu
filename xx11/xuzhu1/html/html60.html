@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input1,
+        .input2 {
+            color: #999;
+            border: 1px solid #999;
+        }
+        
+        .q {
+            border: 1px solid pink;
+            outline: none;
+            color: black;
+        }
+        
+        .w {
+            border: 1px solid pink;
+            outline: none;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <input class="input1" type="text" value="邮箱/ID/手机号">
+    <input class="input2" type="text" value="密码">
+    <script>
+        var asd = document.querySelector('input');
+        asd.onfocus = function() {
+            if (asd.value === '邮箱/ID/手机号' || asd.value === '密码') {
+                asd.value = '';
+                this.className = 'input1 q';
+                // asd.style.borderColor = 'pink';
+                // asd.style.outline = 'none';
+                // asd.style.color = 'black';
+            }
+        }
+        asd.onblur = function() {
+            if (asd.value.length === 0 || asd.value.length === '密码') {
+                asd.value = '邮箱/ID/手机号';
+                this.className = 'input2 w';
+                // asd.style.color = '#999';
+            }
+
+        }
+    </script>
+</body>
+
+</html>

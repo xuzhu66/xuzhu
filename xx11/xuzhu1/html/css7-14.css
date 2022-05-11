@@ -1,0 +1,32 @@
+.mh5{
+    height: 10px;
+    width: 10px;
+    background-color:aliceblue;
+
+}
+.mh4{
+    height: 10px;
+    width: 10px;
+    padding: 10px;
+    background-color: rgb(3, 3, 3);
+    
+}
+.mh3{
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+    background-color: rgb(255, 0, 0);
+    border: 10px;
+    background-color: rgb(250, 249, 250);
+}
+.mh2{
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    background-color: rgb(255, 0, 0);
+    border: 10px;
+    background-color: rgb(235, 8, 216);
+    margin: 10px;
+    background-color: rgb(5, 5, 5);
+}
+

@@ -1,0 +1,94 @@
+<template lang="pug">
+.page-con
+  centerHeader(@goBack="goBack")
+  .common-title 关于我们
+  .page-flow
+    .text 欢迎使用北京滴滴付网络科技有限公司及其关联公司（以下简称“滴滴付”或“我们”）的“ddpay”APP客户端软件及其附带的产品或服务（包括随附在其中的所有文档和文件，但不包括由境外主体或其他第三方提供的产品和/或服务，以下简称“本产品”）。我们将竭诚为您提供更全面、更优质的服务。在您使用本产品前，请您仔细阅读本协议的所有内容、《隐私政策》及我们另行发布的适用于本产品的各协议、条款、规则、公告、通知、等文件（合称“本协议”，前述各项文件之间如存在不一致之处，以时间上最新发布的内容为准）等，特别是本协议内容中以粗体方式显著标识的条款。本协议构成您与本产品运营者之间的法律协议。您确认您具备使用本产品和同意本协议的主体资格。
+    h3 一、OTC交易
+    .text 在“www.域名地址.com”成功下载“滴滴付”客户端，安装完成后可以使用手机或邮箱进行注册
+    .text OTC场外交易指的是不通过交易平台购买，OTC交易是有一种发布广告的形式，双向交易、买卖自由、安全可靠。
+    .text OTC交易系统是一套独立于交易所外的线下购买数字货币的平台，每人都可以在该平台上发布购买/出售广告，购买/出售用户通过线下的方式进行购买/出售，转账完成后在平台确认是否完成，点击确认后平台会将卖方的数字货币转给购买方。OTC交易所系统可以为每个用户都建立了信誉体系。
+    h3 二、C2C交易
+    .text c2c交易也是出于场外交易的一种，是一种为币币交易做铺垫的存在，基本上可以说是一种提供充值体现的渠道，有一种商家入驻的方式，还有一些推荐匹配的方式。平台在其中并不接触资金，是场外交易的升级版。
+    .text C2C交易平台是为数字货币买家和卖家提供信息发布的场所，交易双方根据需求在平台上发布买卖的交易广告。类似“淘宝”模式，买家“拍下”一定数量的数字货币后，平台将卖家的数字货币锁定。根据约定的付款方式，买方向卖方支付人民币，并确认完成付款。卖方收到人民币款项后，确认交易成功，平台自动释放锁定的数字货币给买方。
+    h3 三、交易须知
+    .text 1）	为了保证用户和用户质检的交易安全，强制要求每位用户都需要进行实名认证且无法修改认证过的信息；
+    .text 2）	用户交易必须使用认证信息的实名绑定银行卡进行交易，如果使用非本人实名信息的银行卡交易，交易中出现的任何损失，滴滴付不承担任何责任；
+    .text 3）	买币，买方有恶意或有意进行故意取消交易的行为，核实后，平台将对帐号进行限制或封存帐号的处罚，届时帐号内所有资产将被永久封存；
+    .text 4）	出售，卖方恶意拖延或不放币给买家，核实后，平台将对帐号进行限制或封存帐号的处罚，届时帐号内所有资产将被永久封存；
+    .text 5）	请买卖双方在交易中按照系统提示的时间内完成交易，在交易过程中请实时关注订单状态，如交易中发生任何异常情况，包括但不限于 买家未付款、卖家未放币等等，都可需求客服人工接入对当前订单做出仲裁，请积极配合客服工作，提供相关交易截图和其他证明材料；
+    .text 6）	以上情况都可在交易中或订单详情页面寻找客服的帮助，发现异常请及时联系客服处理；
+
+</template>
+
+<script>
+import { defineComponent, reactive, toRefs, onMounted } from 'vue'
+import centerHeader from '@/views/mine/centerHeader'
+import { useRouter } from 'vue-router'
+export default defineComponent({
+  name: 'About',
+  components: {
+    centerHeader
+  },
+
+  setup() {
+    const router = useRouter()
+    const state = reactive({
+      item: {}
+    })
+    // 路由
+    const jumpPage = (path) => {
+      router.push({
+        path: path
+      })
+    }
+    // 回退
+    const goBack = () => {
+      router.push({ path: '/mine/center' })
+    }
+    onMounted(() => {
+
+    })
+    return {
+      ...toRefs(state),
+      jumpPage,
+      goBack
+    }
+  }
+
+})
+</script>
+<style lang="scss" scoped>
+@import "~@/assets/styles/center.scss";
+
+// 页面样式
+.page-con {
+  height: 100%;
+  padding-top:50px;
+  padding-bottom: 50px;
+  background-color: #f5f7fc;
+  text-align: initial;
+  font-size: 12px;
+  .common-title{
+    font-size:20px;
+    margin: 20px;
+  }
+  .page-flow {
+    padding: 10px;
+    .text{
+      font-size: 13px;
+      line-height: 21px;
+      margin: 10px 0px 10px 10px ;
+    }
+    h4,h5{
+      margin-top: 10px;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      margin: 10px auto;
+    }
+  }
+}
+
+</style>

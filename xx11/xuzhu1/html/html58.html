@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>上午好! </div>
+    <img src="../html/汗.webp" alt="">
+    <script>
+        var pp = document.querySelector('div');
+        var er = document.querySelector('img');
+        var date = new Date();
+        var ojbk = date.getHours();
+        if (ojbk < 12) {
+            er.src = '../html/汗.webp';
+            pp.innerHTML = '上午好'
+        } else if (ojbk < 18) {
+            er.src = '../html/恐龙.webp';
+            pp.innerHTML = '下午好';
+        } else {
+            er.src = '../html/委屈.webp';
+            pp.innerHTML = '晚上好';
+        }
+    </script>
+</body>
+
+</html>

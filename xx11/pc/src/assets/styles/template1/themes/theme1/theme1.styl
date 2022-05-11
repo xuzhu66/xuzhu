@@ -1,0 +1,213 @@
+@import "../color.styl"; //引入配置
+@import "homePage.styl"; //引入页面配置
+@import "centerPage.styl"; //引入页面配置
+
+root = {
+  name: "theme1", //主题标识
+  // common模板
+  base_font_color01: #d6d6dd,
+  base_font_color02: #c6c6cc,
+  base_bg_color01: #f5f9fc,
+  base_bg_color02: #8d8d8d,
+  base_bg_color03: #ededed,
+
+
+  // 通用变量
+  bg001:#f7f7fb, // 背景颜色
+  bg02:#e4e4f2, // 背景颜色
+  bg03:#f1c453, // 背景颜色
+  bg04:#ffffff, // 背景颜色
+  bg05:#cfd7e6, // 背景颜色
+  bg06:#10be14, // 背景颜色
+  bg07:#c4c7cc, // 背景颜色
+  bg08:#f8f9fb, // 背景颜色
+  bg09:#07bf1d, // 背景颜色
+  bg10:#d3d9e5, // 背景颜色
+  bg11:#bcc1cc, // 背景颜色
+  bg12:#bd9a5c, // 背景颜色
+  bg13:#e6e9ef, // 背景颜色
+  bg14:#d8bd8b, // 背景颜色
+  bg15:#f4f8fe, // 背景颜色
+  bg16:#f0f4fe, // 背景颜色
+  bg17:#7f8899, // 背景颜色
+  bg18:#d8bd8c, // 背景颜色
+  bg19:#dee2eb, // 背景颜色
+  bg20:#e5e9f0, // 背景颜色
+  bg21:#eeeeee, // 背景颜色
+  bg22:#f8f9fb, // 背景颜色
+  bg23:#fafafa, // 背景颜色
+  bg24:#bf9c5f, // 背景颜色
+  bg25:#454a53, // 背景颜色
+  bg26:#d8bd8c, // 背景颜色
+  bg27:#fafaf2, // 背景颜色
+  bg28:#f1f3f7, // 背景颜色
+  bg29:#fcf5e5, // 背景颜色
+  bg30:#f2f2f2, // 背景颜色
+  bg31:#bf9d61, // 背景颜色
+  bg32:#e5e5e5, // 背景颜色
+  bg33:#88ca7d, // 背景颜色
+  bg34:#fd9696, // 背景颜色
+  bg35:#d8be8c, // 背景颜色
+  bg36:#f2f2fa, // 背景颜色
+  bg37:#dac08f, // 背景颜色
+  bg38:rgba(0,0,0,0.7), // 背景颜色
+  bg39:#ff0, // 背景颜色
+  bg40:#f6f8fc, // 背景颜色
+  bg41:#737780, // 背景颜色
+  bg42:#ff0000, // 背景颜色
+  bg43:#e6d5b8, // 背景颜色
+  bg44:rgba(0,0,0,.5), // 背景颜色
+  bg45:#dddddd, // 背景颜色
+  bg46:#121212, // 背景颜色
+  bg47:#485052, // 背景颜色
+  bg48:#ededed, // 背景颜色
+  bg49:#000000, // 背景颜色
+  bg50:#000000, // 背景颜色
+  bg51:rgba(0,0,0,0), // 背景颜色
+  bg60:#c4c7cc, // 背景颜色
+  bg68:#92959b, // 背景颜色
+  bg70:#f1bd64,//背景颜色
+
+  fc01:#ffffff, // 字体颜色
+  fc02:#000000, // 字体颜色
+  fc03:#5c5c66, // 字体颜色
+  fc04:#d6d6dd, // 字体颜色
+  fc05:#6a7180, // 字体颜色
+  fc06:#444952, // 字体颜色
+  fc07:#7f8899, // 字体颜色
+  fc08:#a9b4cc, // 字体颜色
+  fc09:red, // 字体颜色
+  fc010:#ebb427, // 字体颜色
+  fc011:green, // 字体颜色
+  fc012:#1c1e22, // 字体颜色
+  fc013:#bf9d61, // 字体颜色
+  fc014:#2f7ce4, // 字体颜色
+  fc015:#bd9a5c, // 字体颜色
+  fc016:#8f98b2, // 字体颜色
+  fc017:#454a53, // 字体颜色
+  fc018:#666666, // 字体颜色
+  fc019:#11af0d, // 字体颜色
+  fc020:#afb9d0, // 字体颜色
+  fc021:#2989eb, // 字体颜色
+  fc022:#808080, // 字体颜色
+  fc023:#bc995b, // 字体颜色
+  fc024:#c5c9d3, // 字体颜色
+  fc025:#d6bb88, // 字体颜色
+  fc026:#d8bd8c, // 字体颜色
+  fc027:#2f7ce4, // 字体颜色
+  fc028:#c5c7cd, // 字体颜色
+  fc029:#339dff, // 字体颜色
+  fc030:#cccccc, // 字体颜色
+  fc031:#10bd1c, // 字体颜色
+  fc032:#ff3333, // 字体颜色
+  fc033:#1b63e4, // 字体颜色
+  fc034:#bd995c, // 字体颜色
+  fc035:#4d4d4d, // 字体颜色
+  fc036:cornflowerblue, // 字体颜色
+  fc037:#f2f2fa, // 字体颜色
+  fc038:#000000, // 字体颜色
+  fc039:#2eba09, // 字体颜色
+  fc040:#dadae5, // 字体颜色
+  fc041:#e6d5b8, // 字体颜色
+  fc042:#d3d3e5, // 字体颜色
+  fc043:#545a66, // 字体颜色
+  fc044:#494e58, // 字体颜色
+  fc045:#aeaebc, // 字体颜色
+  fc046:#ceb07a, // 字体颜色
+  fc047:#caab73, // 字体颜色
+  fc048:#bba06f, // 字体颜色
+  fc049:#dadbdc, // 字体颜色
+  fc050:#767982, // 字体颜色
+  fc051:#44474d, // 字体颜色
+  fc052:#8e9197, // 字体颜色
+  fc053:#d8be8c, // 字体颜色
+  fc054:#bfbfbf, // 字体颜色
+  fc055:#bd9a5d, // 字体颜色
+  fc056:#eff2f7, // 字体颜色
+  fc057:#ce0000, // 字体颜色
+  fc058:#d3d3e6, // 字体颜色
+  fc059:#737780, // 字体颜色
+  fc060:#bb9759, // 字体颜色
+  fc061:#a9b5cc, // 字体颜色
+  fc062:#00ffff, // 字体颜色
+  fc063:#a1a1b2, // 字体颜色
+  fc064:#b8becc, // 字体颜色
+  fc065:#bc985b, // 字体颜色
+  fc066:#999999, // 字体颜色
+  fc067:#dddddd, // 字体颜色
+  fc068:#f0d868, // 字体颜色
+  fc069:#000000, // 字体颜色
+  fc070:#000000, // 字体颜色
+  fc088:#444952, // 字体颜色
+
+
+  border01: #ffffff, // 边框颜色
+  border02: #edf0fa, // 边框颜色
+  border03: #eaeaea, // 边框颜色
+  border04: #7f8899, // 边框颜色
+  border05: #e5e5e5, // 边框颜色
+  border06: #6a7180, // 边框颜色
+  border07: #c4c7cc, // 边框颜色
+  border08: #f0f4fe, // 边框颜色
+  border09: #e6e9ef, // 边框颜色
+  border10: skyblue, // 边框颜色
+  border11: #c4a268, // 边框颜色
+  border12: #f0f4fe, // 边框颜色
+  border13: #bc995b, // 边框颜色
+  border14: #d6bb88, // 边框颜色
+  border15: #999999, // 边框颜色
+  border16: #8f98b2, // 边框颜色
+  border17: #454a53, // 边框颜色
+  border18: #edf1fa, // 边框颜色
+  border19: #f2f2f2, // 边框颜色
+  border20: #cdd3dc, // 边框颜色
+  border21: #f2f2fa, // 边框颜色
+  border22: #2f7ce4, // 边框颜色
+  border23: #e6e9ef, // 边框颜色
+  border24: #f5f8fe, // 边框颜色
+  border25: #f1f1f8, // 边框颜色
+  border26: #e6e6e6, // 边框颜色
+  border27: #f1f3f7, // 边框颜色
+  border28: #bf9d61, // 边框颜色
+  border29: #ffffff, // 边框颜色
+  border30: #cbc7bf, // 边框颜色
+  border31: #d8be8c, // 边框颜色
+  border32: #f3f7ff, // 边框颜色
+  border33: #bb9759, // 边框颜色
+  border34: #a9b5cc, // 边框颜色
+  border35: #a1a1b2, // 边框颜色
+  border36: #f0f0f4, // 边框颜色
+  border37: #d3d3e5, // 边框颜色
+  border38: #bc985b, // 边框颜色
+  border39: #dddddd, // 边框颜色
+  border40: #f0d868, // 边框颜色
+  border41: #867f7f, // 边框颜色
+  border40: #ffffff, // 边框颜色
+  border40: #000000, // 边框颜色
+
+  // 阴影
+  shadow01: (0px 0px 10px #f7e7c9),
+  shadow02: (0px 0px 10px #cbcbcb),
+  shadow03: (0px 5px 15px 0px rgba(220, 227, 238, 0.35)),
+  shadow04: (0px 0px 10px #f3f5f8),
+  shadow05: (0px 5px 40px 0px rgba(106, 113, 127, 0.15)),
+
+  // 渐变
+  linear01: linear-gradient(#f5f9fc, #f6f8fd),
+  linear02: linear-gradient(0deg, #bb9759 0%, #dac08f 100%),
+  linear03: linear-gradient(#ebb427, #ebb427),
+  linear04: linear-gradient(#f4f8fe,#f4f8fe),
+  linear05: linear-gradient(#d8bd8b,#d8bd8b),
+  linear06: linear-gradient(#f1c453,#f1c453),
+  linear07: linear-gradient(0deg, #bb9759 0%, #dac08f 100%),
+  linear08: linear-gradient(#bf9d61, #bf9d61),
+  linear09: linear-gradient(90deg,#bc985b 0%,#dac08f 100%),
+  linear10: linear-gradient(#d6bb88, #d6bb88),
+  linear11: linear-gradient(90deg, #dde2f0 0%, #fcfdff 100%),
+  linear12: linear-gradient(#dce0e6, #dce0e6),
+  linear13: linear-gradient(#f3f7ff, #f3f7ff)
+
+
+}
+
+theme1 = extend(root, homePage, centerPage)

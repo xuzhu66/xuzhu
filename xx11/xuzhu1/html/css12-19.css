@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.demo::after{
+    content: "";
+    clear: both;
+    display: block;
+    
+}
+.demo{
+       border: 1px solid red;
+    }
+.demo1,
+.demo2,
+.demo3{
+    float:left;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: #fff;
+
+}
+

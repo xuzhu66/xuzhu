@@ -1,0 +1,108 @@
+@import "homePage.styl"; //引入页面配置
+@import "centerPage.styl"; //引入页面配置
+
+// **************  模板公共颜色  **************** //
+
+// 背景色 - 底
+$page_bg_common = #fafafa
+// 背景色 - 游戏列表
+$page_bg_common2 = #ffffff
+// 背景色 - 头部标题
+$page_bg_common3 = #ffd5a0
+
+// 背景按钮-已输入
+$btn_bg_ok = #dba057
+// 背景按钮-未输入
+$btn_bg_ng = #f2f2f2
+
+// 边框按钮-已输入
+$btn_border_ok = #dba057
+// 边框按钮-未输入
+$btn_border_ng = #f2f2f2
+
+// 按钮渐变色
+$btn_linear = linear-gradient(#dba057, #ffd5a0)
+$btn_linear2 = linear-gradient(#ffd5a0, #dba057)
+// 边框
+$border_common = #f2f2f2
+
+// 字体
+$font1 = #1a1a1a
+$font2 = #4c4c4c
+$font3 = #808080
+$font4 = #dba057
+$font5 = #cccccc
+$font6 = #fffaf5
+
+// 阴影 #e5e5e5 透明度50% 距离8 大小20
+$shadow = (0px 8px 20px 0px rgba(229, 229, 229, 0.5))
+$shadow_yellow = (0px 0px 10px 2px rgba(219, 160, 87, 0.2))
+$shadow_hui = (0px 8px 20px 0px rgba(204, 204, 204, 0.5))
+$shadow_yellow2 = (0px 0px 5px 5px rgba(219, 160, 87, 0.5))
+// 数值颜色
+$fff = #ffffff
+$black = #000000
+$c000 = #000000
+$c999 = #999999
+$c666 = #666666
+$c333 = #333333
+$red = #ff3333
+$green = #00dc00
+$yellow = yellow
+$blue = blue
+// **************  模板私有颜色  **************** //
+
+root = {
+    name: "theme1", //主题标识
+    // 背景
+    bg1 : $page_bg_common, // bg_color(bg1)
+    bg2 : $page_bg_common2, // bg_color(bg2)
+    bg3 : $page_bg_common3, // bg_color(bg3)
+    bg4 : $btn_bg_ng, // bg_color(bg4)
+    bg5 : $red, // bg_color(bg5)
+    bg6 : $c999, // bg_color(bg5)
+
+    // 按钮
+    btn_bg_ok:$btn_bg_ok, // bg_color(btn_bg_ok)
+    btn_bg_ng:$btn_bg_ng, // bg_color(btn_bg_ng) border_com(1px,solid,btn_bg_ng,bottom)
+    btn_border_ok:$btn_border_ok, //  border_all(1px, solid, btn_border_ok)
+    btn_border_ng:$btn_border_ng, //  border_all(1px, solid, btn_border_ng)
+
+    // 按钮渐变色
+    btn_linear:$btn_linear, // bg_img_linear(linear_common)
+
+    // 边框
+    border_common:$border_common, // border_com(1px, solid, border_common, top)  border_all(1px, solid, border_common)
+    border_hui1:$btn_border_ng, // border_com(1px, solid, border_hui, top)
+    border_hui2:$font5, // border_com(1px, solid, border_hui, top)
+    border_yellow:$btn_border_ok, // border_com(1px, solid, border_yellow, top)
+    border_braw:$font4, // border_com(1px, solid, border_braw, top)
+
+    // 字体
+    fc1:$font1, // 黑色 font_color(fc1)
+    fc2:$font2, // 黑灰色 font_color(fc2)
+    fc3:$font3, // 灰色 标题颜色 font_color(fc3)
+    fc4:$font4, // 金色 font_color(fc4)
+    fc5:$font5, // ccc灰白色 font_color(fc5)
+    fc6:$font6, // fa白色 font_color(fc6)
+    fc08:#a9b4cc, // 字体颜色
+    // 按钮渐变色
+    linear_common:$btn_linear, // bg_img_linear(linear_common)
+    linear_common2:$btn_linear2, // 和linear_common相反
+
+    // 阴影
+    shadow_common: $shadow, // box_shadow(shadow_common)
+    shadow_yellow: $shadow_yellow, // box_shadow(shadow_common)
+    shadow_yellow2: $shadow_yellow2, // box_shadow(shadow_common)
+    shadow_hui: $shadow_hui, // box_shadow(shadow_hui)
+
+    // 数字颜色
+    red_c:$red,
+    green_c:$green,
+    yellow_c:$font4
+    blue_c:$blue
+
+    linear12: linear-gradient(#dce0e6, #dce0e6),
+}
+
+theme1 = extend(root, homePage, centerPage)

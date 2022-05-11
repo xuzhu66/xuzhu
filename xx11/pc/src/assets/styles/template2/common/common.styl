@@ -1,0 +1,218 @@
+@import "../themes/mixin.styl"; //引入配置
+
+.layout
+    width 1200px;
+    margin 0 auto;
+
+.display-enter, .display-leave-active
+    opacity: 0
+
+.display-enter-active, .display-leave
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+
+.fl
+    float left
+
+.fr
+    float right
+
+.img
+    background-repeat no-repeat
+    background-position 50%
+    background-size cover
+
+[class^="icon-"], [class*=" icon-"]
+    font-family: 'icomoon' !important
+    speak: none
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    font-size: 22px
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+//@font-face
+//  font-family: 'icomoon'
+//  src: url('../fonts/icomoon.ttf')
+//  font-weight: normal
+//  font-style: normal
+//  font-display: swap
+
+.txt
+    margin 0 3px
+    font_color(fc01)
+    cursor pointer
+    font-weight 500
+    text-decoration: underline;
+
+.red
+    color red
+    font-weight 500
+
+// #qrcode
+.qrcode
+    padding: 10px;
+    width: 140px;
+    height: 140px;
+    margin: 20px auto;
+    border-radius: 8px;
+    background-color: $fff;
+    bg_color(fc090)
+
+// notdata
+.nodata
+    background url("~@/assets/images/template2/center/kongbaitu.png") center no-repeat
+    display: block;
+    width: 334px;
+    height: 287px;
+    margin: 18px auto 0;
+    margin-bottom 60px
+
+// datepicker
+.comDatepicker
+    .datepicker-range
+        min-width 230px
+        float: left;
+        margin-right: 10px;
+
+        input
+            font_color(fc066)
+            border_all(1px, solid, border15)
+            height 30px
+            border-radius: 4px;
+
+            &.focus
+                border_all(1px, solid, border01)
+
+        .datepicker-popup
+            width: 420px;
+
+            .datepicker__buttons
+                float: right;
+                margin-right: 28px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+
+                .datepicker__buttons button
+                    margin: 10px 4px 0 5px;
+
+//省略号
+.elli
+    display inline-block
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+
+//tab-list
+.tab-list
+    display flex
+    flex-direction row
+    flex-wrap nowrap
+    font_color(fc067)
+    border_com(1px, solid, border39, bottom)
+    font-size 14px
+
+    .tab
+        padding 10px 20px
+        position relative
+
+        &:after
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 1em;
+            bg_color(bg45)
+            right: -2px;
+            top: 50%;
+            transform translateY(-50%)
+            margin-right: 0;
+
+    .actived
+        font_color(fc068)
+        border_com(2px, solid, border40, bottom)
+
+
+//table
+.table-common
+    font-size 14px
+    font_color(fc067)
+
+    .table-title
+        display flex
+        flex-flow nowrap
+        flex-direction row
+        height 45px
+        line-height 45px
+        vertical-align: middle;
+        border_com(1px, solid, border39, bottom)
+
+        span
+            flex 1
+            bg_color(bg46)
+            font_color(fc068)
+            font-weight: 400;
+            font-size: 14px;
+            text-align: left;
+            padding-left 18px
+
+    .table-list
+        .item-row
+            height 54px
+            vertical-align: middle;
+            border_com(2px, solid, border41, bottom)
+            display flex
+            flex-flow nowrap
+            flex-direction row
+
+            &.no-data
+                height auto
+
+                &:hover
+                    background-color transparent
+
+            &:hover
+                bg_color(bg47)
+
+            .column
+                flex 1
+                padding-left 18px
+                display: flex;
+                justify-content: center;
+                align-items: left;
+                flex-direction column
+
+                &.spring_159 {
+                    //background url("../../assets/images/spring.png") no-repeat
+                    width: 100px;
+                    height: 100px;
+                    background-position: -323px -141px;
+                    flex: none
+                    margin: 100px auto;
+                }
+
+    // 时间查询
+
+    .search-item
+        font-size: 14px;
+        font_color(fc018)
+
+        &.time
+            margin 0 10px
+
+        &.ok
+            cursor pointer
+            width: 63px;
+            height: 30px;
+            line-height 30px
+            line-height: 30px;
+            bg_color(bg18)
+            border-radius: 5px;
+            font-size: 14px;
+            font_color(fc017)
+            text-align center
+            margin-left 10px

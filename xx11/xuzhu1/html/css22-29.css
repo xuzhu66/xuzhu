@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.d {
+    width: 800px;
+    height: 1000px;
+    background-color: bisque;
+    margin: 0 auto;
+}
+
+.a {
+    position: fixed;
+    width: 50px;
+    height: 150px;
+    background-color: blue;
+    left: 50%;
+    margin-left: 405px;
+    margin-top: 20px;
+}

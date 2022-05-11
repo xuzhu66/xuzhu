@@ -1,0 +1,62 @@
+{
+    "code": 200,
+    "success": true,
+    "data": [
+        {
+            "id": 8,
+            "name": "银行卡转账",
+            "payModeId": 2,
+            "minAmount": "100",
+            "maxAmount": "99999",
+            "fixedAmountStr": "130,530,1200,2500,5800,16600,48000,99900",
+            "thirdCode": "5",
+            "thirdSubCode": "",
+            "code": "bank_card"
+        },
+        {
+            "id": 7,
+            "name": "支付宝",
+            "payModeId": 3,
+            "minAmount": "100",
+            "maxAmount": "99999",
+            "fixedAmountStr": "120,520,1200,2200,2800,26600,28000,29900",
+            "thirdCode": "6",
+            "thirdSubCode": "",
+            "code": "alipay"
+        },
+        {
+            "id": 8,
+            "name": "微信",
+            "payModeId": 4,
+            "minAmount": "100",
+            "maxAmount": "99999",
+            "fixedAmountStr": "1120,1520,11200,12200,12800,126600,128000,129900",
+            "thirdCode": "7",
+            "thirdSubCode": "",
+            "code": "weChat"
+        },
+        {
+            "id": 2,
+            "name": "支付宝-h5",
+            "payModeId": 4,
+            "minAmount": "100",
+            "maxAmount": "99999",
+            "fixedAmountStr": "1120,1520,11200,12200,12800,126600,128000,129900",
+            "thirdCode": "7",
+            "thirdSubCode": "",
+            "code": "alipay_h5"
+        },
+        {
+            "id": 3,
+            "name": "微信-h5",
+            "payModeId": 4,
+            "minAmount": "100",
+            "maxAmount": "99999",
+            "fixedAmountStr": "1120,1520,11200,12200,12800,126600,128000,129900",
+            "thirdCode": "7",
+            "thirdSubCode": "",
+            "code": "weChat_h5"
+        }
+    ],
+    "msg": "操作成功"
+}

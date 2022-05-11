@@ -1,0 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    width: 60px;
+    height: 60px;
+    background: url(https://game.gtimg.cn/images/yxzj/web201706/images/comm/index.png) -182px 0px;
+}

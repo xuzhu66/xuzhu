@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* float: left; */
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qwe {
+    width: 250px;
+    height: 300px;
+    border: 1px solid transparent;
+    background-color: rgb(252, 255, 252);
+}
+
+.kuaidi {
+    height: 50px;
+    border: 1px solid black;
+    margin: 20px 25px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 11px;
+    font-weight: 100;
+    border: 1px solid transparent;
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.lanya {
+    border: 1px solid transparent;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 10px 0px 0px 25px;
+}
+
+.yi {
+    color: rgb(173, 170, 170);
+    margin: 8px 5px 0px 10px;
+}
+
+.jiage {
+    color: rgb(238, 93, 10);
+    margin-top: 10px;
+    font-size: 12px;
+}

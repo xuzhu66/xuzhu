@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)file:///Users/xuzhu/Desktop/xx11/xuzhu1/html/Vue-%E6%B5%8B%E8%AF%95.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* background-image: url(../html/c487cab2bbb1e9e14cf62708b15eacbe.jpg); */
+            background: url(../html/images22.jpeg);
+            background-size: 100% auto;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .weibu {
+            width: 700px;
+            height: 500px;
+            /* border: 1px solid black; */
+            margin: 30px auto;
+        }
+        /* 顶部栏  */
+        
+        .top {
+            display: flex;
+            width: 700px;
+            height: 50px;
+            background-color: rgb(41, 170, 246);
+        }
+        
+        .top-zuo {
+            line-height: 50px;
+            left: 20px;
+            flex: 1;
+            margin-left: 40px;
+        }
+        
+        .top-shousuo-fdj {
+            position: relative;
+        }
+        
+        .top-you {
+            border: 0;
+            width: 200px;
+            height: 26px;
+            border-radius: 30px;
+            outline: none;
+            margin: 13px 10px;
+            padding-left: 10px;
+        }
+        
+        .top-fdj {
+            position: absolute;
+            border: 0;
+            width: 20px;
+            height: 20px;
+            right: 20px;
+            top: 16px;
+            background-color: rgb(255, 255, 255);
+        }
+        /* 中间内容区 */
+        
+        div.zhongbu {
+            display: flex;
+            width: 100%;
+            height: 400px;
+            /* background: url(../html/015cc1a576f816dc33d82dcd7ae5947b.jpg); */
+            background-image: url(../html/015cc1a576f816dc33d82dcd7ae5947b.jpg);
+            background-size: 100% auto;
+            flex: 1;
+        }
+        
+        .zhongbu-zuo {
+            Overflow: auto;
+        }
+        
+        .zhongbu-zuo-li {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            /* border: 1px solid black; */
+        }
+        
+        .zhongbu-zuo-li-neirong {
+            display: flex;
+            align-items: center;
+        }
+        
+        .zhongbu-zuo-li-neirong-mv {
+            position: absolute;
+            right: 10px;
+        }
+        
+        .zhongbu-zuo,
+        .zhongbu-you {
+            width: 30%;
+            height: 100%;
+        }
+        
+        .zhongbu-you {
+            font-weight: 700;
+            font-size: 13px;
+            Overflow: auto;
+        }
+        
+        .zhongbu-you-rmly {
+            /* margin: 0px 10px; */
+            padding: 0px 10px;
+        }
+        
+        .txt {
+            width: 130px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        /* 中部，中 */
+        
+        .zhongbu-zhong {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+        
+        .img-gan {
+            position: absolute;
+            left: 40%;
+            top: 0px;
+            transform-origin: 20px 20px;
+            transform: rotate(-50deg);
+            transition: all 1s;
+        }
+        
+        .img-gan.img-gan2 {
+            transform: rotate(-15deg);
+        }
+        /* .img-gan:hover {
+            transform: rotate(-15deg);
+        } */
+        
+        .img-beijin {
+            position: absolute;
+            left: 6%;
+            top: 75px;
+        }
+        
+        .img-geqbeijin {
+            position: absolute;
+            width: 157px;
+            height: 154px;
+            /* border: 1px solid black; */
+            left: 26%;
+            top: 36%;
+            display: none;
+        }
+        
+        .img-geqbeijin.img-geqbeijin2 {
+            display: block;
+        }
+        
+        .gequtu {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        
+        ul {
+            width: 100%;
+            /* border: 1px solid black; */
+        }
+        
+        li {
+            width: 100%;
+            height: 40px;
+            border: 1px solid black;
+            list-style: none;
+        }
+        /* 中，右 */
+        
+        .name {}
+        
+        .zhongbu-you-liuyan {
+            width: 100%;
+        }
+        
+        .zhongbu-you-liuyan-li {
+            width: 100%;
+            height: 80px;
+            border: 1px solid black;
+            list-style: none;
+        }
+        
+        .nameimg {
+            margin: 5px 5px;
+            width: 30px;
+            height: 30px;
+        }
+        /* 底部 */
+        
+        .dibu {
+            width: 100%;
+            height: 50px;
+            background-color: azure;
+        }
+        
+        .dibu-yinping {
+            width: 100%;
+            height: 50px;
+            background-color: azure;
+        }
+        
+        audio::-webkit-media-controls-panel {
+            background: azure;
+        }
+        /* 播放图标 */
+        
+        @font-face {
+            font-family: 'iconfont';
+            src: url(../img/播放按钮/iconfont.ttf) format('truetype');
+        }
+        
+        .iconfont-bofang {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-left: 10px;
+            right: 20px;
+        }
+        /* MV */
+        
+        @font-face {
+            font-family: 'iconfont';
+            src: url(../img/mv/iconfont.ttf) format('truetype');
+        }
+        
+        .iconfont-mv {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="weibu"><div class="top"><span class="top-zuo">音乐播放器</span> <div class="top-shousuo-fdj"><input type="text" class="top-you"> <input type="button" value="🔍" class="top-fdj"></div></div> <div class="zhongbu"><div class="zhongbu-zuo"><ul><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">遗憾 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">如果没有你</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">我是不是你最疼爱的人 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">人質</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">残酷月光 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">爱情没有刚刚好</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">想神马有神马</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">想自由 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">会痛的石头 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">末日不孤单 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">新不了情 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">我是不是你最疼爱的人 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">遗憾 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">傻瓜 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">简单的事 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">到不了 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">取名回忆的时光</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">不懂+你怎么舍得我难过+洋葱+爱我别走+我的未来不是梦</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">在我想起来 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">爱与愁+过火</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">月亮代表我的心 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">簡單的事</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">伤心童话</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">我是不是你最疼爱的人 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">阳光传奇</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">简单的事(现场版)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">希望爱</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">善男信女 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">取名回憶的時光</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li><li class="zhongbu-zuo-li"><div class="zhongbu-zuo-li-neirong"><span class="iconfont-bofang"></span> <span class="zhongbu-zuo-li-neirong-name"><p class="txt">我是不是你最疼爱的人 (Live)</p></span></div> <div class="zhongbu-zuo-li-neirong-mv"><span class="iconfont-mv"></span></div></li></ul></div> <div class="zhongbu-zhong"><img src="./Document_files/Group 3.svg" alt="" class="img-beijin"> <img src="./Document_files/Group 2.svg" alt="" class="img-gan img-gan2"> <div class="img-geqbeijin img-geqbeijin2"><img src="./Document_files/5851600883154885.jpg" alt="" class="gequtu"></div></div> <div class="zhongbu-you"><span class="zhongbu-you-rmly">热门留言</span> <ul class="zhongbu-you-liuyan"><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">玄夜图腾</span> <span class="namely">有多少人和我一样是看了苏宁的广告知道的这首歌？</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">Dear1107671013</span> <span class="namely">非常喜欢李代沫和吴莫愁一起合唱。可惜可惜呀，李代沫，真是可惜了。</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">魔法少女马建国</span> <span class="namely">拜年音乐里少有能听的正经货</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">mocoma</span> <span class="namely">这才是华语应该有的样子嘛 ！[大笑]</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">为什么我不能叫大脸兔</span> <span class="namely">有种想回家过年的冲动...</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">沒力超人</span> <span class="namely">打麻将的时候心里默唱这首再适合不过。😎</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">carnival7</span> <span class="namely">出国在外，回家后对于2014年初印象就是这首歌，一眨眼好快又一年。</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">追风筝的安宁</span> <span class="namely">这首歌是我华语里面最心水的！！！！！
+</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">网瘾少年赵潮潮</span> <span class="namely">时间过的好快，上一次单曲循环这歌还是在马年，今年都鸡年了[流泪]</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">啊啊啊丶梁</span> <span class="namely">三年了，还没上999</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">鲁上黄</span> <span class="namely">2018，还有谁在听的啊</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">普通新鲜popo菌</span> <span class="namely">广告歌的教科书 [强]</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">香芋KOI</span> <span class="namely">希望吴莫愁再次火起来 她的这首 和那首百事可乐的那首我都非常喜欢 六年前的回忆啊</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">磊磊Only_Me</span> <span class="namely">今天突然想起这首歌，于是搜了出来，发现……时间真的真的太快，马上快2019了，五年前的大家，都是什么样子啊😊，我们肯定都比五年前变得更好了哈哈哈，再次来听2014这首歌的，一定是个有心人❤</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">御崎甘草</span> <span class="namely">又找到了这首我遗忘了好久的歌，最喜欢的时候我还在上初中，现在我已经大学了，听起来依然还是好喜欢，回忆起的都是放学后我在我妈的小电驴后一边哼这首歌一边在路灯下寻找我喜欢的那个男孩</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">OKCgeorge</span> <span class="namely">当然，下一轮马年再听</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">溪见tan</span> <span class="namely">6年前，属马的我那年刚满12岁，感觉现在的自己好怀旧啊哈哈....</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">Richard-Leon</span> <span class="namely">坐等2026年，再回马年，重温此曲，慕然回首，不知心里是何感受...</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">凹凸曼和阿童木</span> <span class="namely">我有预感 在这个艺人嘈杂的环境下 吴莫愁这样的实力派被大家想起来 希望我能等到这天</span></li><li class="zhongbu-you-liuyan-li"><img src="./Document_files/109951164089893214.jpg" alt="" class="nameimg"> <span class="name">群青Akatsuki</span> <span class="namely">当年刚听这首歌的时候我还是本科，正是最近这些年最低落的时候。
+后来第二次听到的时候，我在等待硕士入学。那个时候我充满了期待，可是三年下来有些事情还是没做好。
+现在我又听到了这首歌，还有四天就要申请博士了，我希望我能成功。我希望能做到更好。</span></li></ul></div></div> <div class="dibu"><audio src="http://m7.music.126.net/20220506210611/b068dce35741b6b566b0b2d6e08f5992/ymusic/1911/9ba5/5765/83be2f02236cf85fde2d2a262f5bb08a.mp3" controls="controls" autoplay="autoplay" class="dibu-yinping"></audio></div></div>
+    <script src="./Document_files/axios.min.js"></script>
+    <script src="./Document_files/vue.js"></script>
+    <script>
+        // 获取歌曲
+        var app = new Vue({
+            el: '.weibu',
+            data: {
+                gequ: "",
+                liebiao: {},
+                Music: "",
+                Musicimg: "",
+                ping: [],
+                pingimg: '',
+
+            },
+            methods: {
+                xc: function() {
+                    var thth = this;
+                    axios.get("https://autumnfish.cn/search?keywords=" + this.gequ).then(function(res) {
+
+                            // console.log(res);
+                            // console.log(res.data.result.songs);
+                            thth.liebiao = res.data.result.songs;
+                        }),
+                        function(err) {
+
+                        }
+                },
+                play: function(Music) {
+                    var thth = this;
+                    axios.get('https://autumnfish.cn/song/url?id=' + Music).then(function(red) {
+                        // console.log(red.data.data[0].url);
+                        thth.Music = red.data.data[0].url;
+                    }, function(err) {
+
+                    })
+                    var thth = this;
+                    axios.get("https://autumnfish.cn/song/detail?ids=" + Music).then(function(ref) {
+                        // console.log(ref);
+                        thth.Musicimg = ref.data.songs[0].al.picUrl;
+                    }, function(err) {
+
+                    })
+                    var thth = this;
+                    axios.get("https://autumnfish.cn/comment/hot?type=0&id=" + Music).then(function(reg) {
+                        console.log(reg);
+                        console.log(reg.data.hotComments);
+                        console.log(reg.data.hotComments[0].user.avatarUrl);
+                        thth.ping = reg.data.hotComments;
+                        thth.pingimg = reg.data.hotComments[0].user.avatarUrl;
+                    }, function(err) {
+
+                    })
+                },
+
+            }
+        })
+
+
+        //播放歌曲动画
+    </script>
+
+
+</body></html>

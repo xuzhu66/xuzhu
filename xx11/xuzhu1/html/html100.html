@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="qwe">
+        <input type="text" id="asd">
+        <input type="button" value="提交" id="zxc">
+    </form>
+
+    <script>
+        var zh = document.getElementById('qwe');
+        var mm = document.getElementById('asd');
+        var tj = document.getElementById('zxc');
+        tj.addEventListener('click', function() {
+            var xhr = new XMLHttpRequest();
+            var aa = zh.value;
+            var bb = mm.value;
+            var params = 'username=' + aa + '&age=' + bb;
+            xhr.open('post', 'http://192.168.80.67:3000/mock/34/csc-report/history/getInvalidReasonPage');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            xhr.send(params);
+
+            xhr.onload = function() {
+                console.log(xhr.responseText);
+                var ppp = JSON.parse(xhr.responseText);
+                console.log(ppp);
+            }
+        })
+    </script>
+</body>
+
+</html>

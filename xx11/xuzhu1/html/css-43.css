@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    perspective: 300px;
+}
+
+.a {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 200px auto;
+    transition: all 3s;
+    transform-style: preserve-3d;
+}
+
+.b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.c {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 255, 13);
+    transform: rotatex(60deg);
+}
+
+.a:hover {
+    transform: rotateY(60deg);
+}

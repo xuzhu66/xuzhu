@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url(../img/右箭头/iconfont.ttf) format('truetype');
+}
+
+.iconfont {
+    float: right;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div {
+    height: 450px;
+    background-color: blue;
+}
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.hezi {
+    width: 1000px;
+    height: 450px;
+    background: url(..//html/fj.jpg);
+    background-size: 100%;
+    margin: 0 auto;
+}
+
+div .z {
+    float: left;
+    width: 250px;
+    height: 450px;
+}
+
+.znr {
+    float: left;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 50px;
+}
+
+a:hover {
+    color: blue;
+}
+
+.y {
+    float: left;
+    width: 750px;
+    height: 450px;
+}
+
+
+/* 我的课程表 */
+
+.lan {
+    float: right;
+    width: 200px;
+    height: 300px;
+    margin-top: 75px;
+}
+
+h3 {
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 50px;
+}
+
+p {
+    width: 180px;
+    height: 50px;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    margin-left: 10px;
+}
+
+.yi,
+.san,
+.wu {
+    display: block;
+    font-weight: 400;
+    color: rgb(65, 62, 62);
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.er,
+.si,
+.liu {
+    color: rgb(124, 122, 122);
+    margin-left: 10px;
+}
+
+.qbkc {
+    display: block;
+    width: 120px;
+    height: 35px;
+    border: 1px solid blue;
+    color: blue;
+    margin-left: 10px;
+    line-height: 35px;
+    padding-left: 30%;
+    margin-top: 10px;
+    font-weight: 700;
+}

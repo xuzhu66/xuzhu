@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(../html/images22.jpeg);
+            background-size: 100% auto;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .video_mv {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .8);
+            z-index: 1;
+        }
+        
+        .video_mv2 {
+            display: none;
+        }
+        
+        .shiping_mv {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+        
+        .weibu {
+            width: 700px;
+            height: 500px;
+            /* border: 1px solid black; */
+            margin: 100px auto;
+        }
+        /* 顶部栏  */
+        
+        .top {
+            display: flex;
+            width: 700px;
+            height: 50px;
+            background-color: rgb(41, 170, 246);
+        }
+        
+        .top-zuo {
+            line-height: 50px;
+            left: 20px;
+            flex: 1;
+            margin-left: 40px;
+        }
+        
+        .top-shousuo-fdj {
+            position: relative;
+        }
+        
+        .top-you {
+            border: 0;
+            width: 200px;
+            height: 26px;
+            border-radius: 30px;
+            outline: none;
+            margin: 13px 10px;
+            padding-left: 10px;
+        }
+        
+        .top-fdj {
+            position: absolute;
+            border: 0;
+            width: 20px;
+            height: 20px;
+            right: 20px;
+            top: 16px;
+            background-color: rgb(255, 255, 255);
+        }
+        /* 中间内容区 */
+        
+        div.zhongbu {
+            display: flex;
+            width: 100%;
+            height: 400px;
+            /* background: url(../html/015cc1a576f816dc33d82dcd7ae5947b.jpg); */
+            background-image: url(../html/015cc1a576f816dc33d82dcd7ae5947b.jpg);
+            background-size: 100% auto;
+            flex: 1;
+        }
+        
+        .zhongbu-zuo {
+            Overflow: auto;
+        }
+        
+        .zhongbu-zuo-li {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            /* border: 1px solid black; */
+        }
+        
+        .zhongbu-zuo-li-neirong {
+            display: flex;
+            align-items: center;
+        }
+        
+        .zhongbu-zuo-li-neirong-mv {
+            position: absolute;
+            right: 10px;
+        }
+        
+        .zhongbu-zuo,
+        .zhongbu-you {
+            width: 30%;
+            height: 100%;
+        }
+        
+        .zhongbu-you {
+            font-weight: 700;
+            font-size: 13px;
+            Overflow: auto;
+        }
+        
+        .zhongbu-you-rmly {
+            /* margin: 0px 10px; */
+            padding: 0px 10px;
+        }
+        
+        .txt {
+            width: 130px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        /* 中部，中 */
+        
+        .zhongbu-zhong {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+        
+        .img-gan {
+            position: absolute;
+            left: 40%;
+            top: 0px;
+            transform-origin: 20px 20px;
+            transform: rotate(-50deg);
+            transition: all 1s;
+        }
+        
+        .img-gan.img-gan2 {
+            transform: rotate(-15deg);
+        }
+        /* .img-gan:hover {
+            transform: rotate(-15deg);
+        } */
+        
+        .img-beijin {
+            position: absolute;
+            left: 6%;
+            top: 75px;
+        }
+        
+        .img-geqbeijin {
+            position: absolute;
+            width: 157px;
+            height: 154px;
+            /* border: 1px solid black; */
+            left: 26%;
+            top: 36%;
+            display: none;
+        }
+        
+        .img-geqbeijin.img-geqbeijin2 {
+            display: block;
+        }
+        
+        .gequtu {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        
+        ul {
+            width: 100%;
+            /* border: 1px solid black; */
+        }
+        
+        li {
+            width: 100%;
+            height: 40px;
+            list-style: none;
+        }
+        /* 中，右 */
+        
+        .zhongbu-you-liuyan {
+            width: 100%;
+        }
+        
+        .zhongbu-you-liuyan-li {
+            display: flex;
+            width: 100%;
+            height: 80px;
+            list-style: none;
+        }
+        
+        .z {
+            width: 33%;
+            /* flex: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; */
+        }
+        
+        .nameimg {
+            margin: 5px 5px;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+        }
+        
+        .y {
+            width: 66%;
+            flex: 1;
+            flex-direction: column;
+        }
+        
+        .name {
+            width: 100%;
+            height: 40%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        
+        .namely {
+            /* display: block; */
+            width: 100%;
+            height: 71%;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        /* 底部 */
+        
+        .dibu {
+            width: 100%;
+            height: 50px;
+            background-color: azure;
+        }
+        
+        .dibu-yinping {
+            width: 100%;
+            height: 50px;
+            background-color: azure;
+        }
+        
+        audio::-webkit-media-controls-panel {
+            background: azure;
+        }
+        /* 播放图标 */
+        
+        @font-face {
+            font-family: 'iconfont';
+            src: url(../img/播放按钮/iconfont.ttf) format('truetype');
+        }
+        
+        .iconfont-bofang {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            margin-left: 10px;
+            right: 20px;
+        }
+        /* MV */
+        
+        @font-face {
+            font-family: 'iconfont';
+            src: url(../img/mv/iconfont.ttf) format('truetype');
+        }
+        
+        .iconfont-mv {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="weibu">
+        <div class="video_mv" v-show="isshow" @click="yc">
+            <video class="shiping_mv" :src="mvurl" autoplay></video>
+        </div>
+        <div class="top">
+            <span class="top-zuo">音乐播放器</span>
+            <div class="top-shousuo-fdj">
+                <input type="text" class="top-you" v-model="gequ" @keyup.enter="xc">
+                <input type="button" class="top-fdj" @click="xc" value="🔍">
+            </div>
+        </div>
+        <div class="zhongbu">
+            <div class="zhongbu-zuo">
+                <ul>
+                    <li v-for="jieguo in liebiao" class="zhongbu-zuo-li">
+                        <div class="zhongbu-zuo-li-neirong">
+                            <span class="iconfont-bofang" @click="play(jieguo.id)">&#xe624;</span>
+                            <span class="zhongbu-zuo-li-neirong-name"> 
+                            <p  class="txt">{{jieguo.name}}</p>
+                            </span>
+                        </div>
+                        <div class="zhongbu-zuo-li-neirong-mv">
+                            <span class="iconfont-mv" v-show="jieguo.mvid!=0" @click="playmv(jieguo.mvid)">&#xe62c;
+                            </span>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="zhongbu-zhong">
+
+                <img class="img-beijin" src="../html/Group 3.svg" alt="">
+                <img class="img-gan" :class="Music?'img-gan2':''" src="../html/Group 2.svg" alt="">
+                <div class="img-geqbeijin" :class="Musicimg?'img-geqbeijin2':'img-geqbeijin'">
+                    <img class="gequtu" v-bind:src="Musicimg" alt="">
+                </div>
+            </div>
+            <div class="zhongbu-you">
+                <span class="zhongbu-you-rmly">热门留言</span>
+                <ul class="zhongbu-you-liuyan">
+                    <li v-for="lyiuyan in ping" class="zhongbu-you-liuyan-li">
+                        <div class="z">
+                            <img class="nameimg" :src="lyiuyan.user.avatarUrl" alt="">
+                        </div>
+                        <div class="y">
+                            <b class="name">{{lyiuyan.user.nickname}}</b>
+                            <span class="namely">{{lyiuyan.content}}</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dibu">
+            <audio class="dibu-yinping" v-bind:src="Music" controls autoplay></audio>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        // 获取歌曲
+        var app = new Vue({
+            el: '.weibu',
+            data: {
+                gequ: "",
+                liebiao: {},
+                Music: "",
+                Musicimg: "",
+                ping: [],
+                isshow: false,
+                mvurl: "",
+
+            },
+            methods: {
+                xc: function() {
+                    var thth = this;
+                    axios.get("https://autumnfish.cn/search?keywords=" + this.gequ).then(function(res) {
+
+                            // console.log(res);
+                            // console.log(res.data.result.songs);
+                            // console.log(res.data.result.songs[0].mvid);
+                            thth.liebiao = res.data.result.songs;
+
+
+                        }),
+                        function(err) {
+
+                        }
+                },
+                play: function(Music) {
+                    var thth = this;
+                    axios.get('https://autumnfish.cn/song/url?id=' + Music).then(function(red) {
+                        // console.log(red.data.data[0].url);
+                        thth.Music = red.data.data[0].url;
+                    }, function(err) {
+
+                    })
+                    var thth = this;
+                    axios.get("https://autumnfish.cn/song/detail?ids=" + Music).then(function(ref) {
+                        // console.log(ref);
+                        thth.Musicimg = ref.data.songs[0].al.picUrl;
+                    }, function(err) {
+
+                    })
+                    var thth = this;
+                    axios.get("https://autumnfish.cn/comment/hot?type=0&id=" + Music).then(function(reg) {
+                        // console.log(reg);
+                        // console.log(reg.data.hotComments);
+                        // console.log(reg.data.hotComments[0].user.avatarUrl);
+                        thth.ping = reg.data.hotComments;
+                        // thth.pingimg = reg.data.hotComments[0];
+                    }, function(err) {
+
+                    })
+
+                },
+                playmv: function(mvid) {
+                    var thth = this;
+                    axios.get("https://autumnfish.cn/mv/url?id=" + mvid).then(function(rea) {
+                        // console.log(rea.data.data.url);
+                        thth.isshow = true;
+                        thth.mvurl = rea.data.data.url;
+
+                    }, function(err) {
+
+                    })
+                },
+                yc: function() {
+                    this.isshow = false;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

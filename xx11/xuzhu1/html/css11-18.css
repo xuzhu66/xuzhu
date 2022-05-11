@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* .a{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    margin-top: 200px;
+    margin-left: 200px;
+    overflow: hidden; 多出来的部分消失
+     position: absolute;                 
+    display: inline-block;
+}
+.b{
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    margin-left: 70px;
+    margin-top: 75px; ;
+} */ 
+.a{
+    background-color: aqua;
+    border: 1px solid black;
+   margin-bottom: 200px;
+}
+.b{
+   background-color: thistle;
+   margin-top: 0px;
+}

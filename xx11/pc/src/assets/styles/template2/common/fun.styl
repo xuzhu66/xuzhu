@@ -1,0 +1,174 @@
+@import '~@styl/comstyle/animate/hover.styl'
+@import "~@styl/comstyle/animate/animate.styl"
+@import '~@/assets/styles/template2/themes/mixin.styl'
+// 导航栏背景颜色
+bg-linear()
+    background-image: linear-gradient(to right, #c59e5b, #dfc48c)
+
+layfex($w, $h)
+    display inline-block
+    width $w
+    height $h
+    background-color: $bg-footer
+
+layfl()
+    overflow hidden
+    float: left;
+    width: 100%;
+
+// absolute()
+absolute()
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+// fixed()
+fixed()
+    position fixed
+
+// before
+before()
+    content ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+// after
+after()
+    content ''
+    display block
+    position: absolute
+
+//reset ul
+resetul()
+    margin 0
+    padding 0
+    list-style none
+
+flexcon()
+    display flex
+    flex-direction row
+    justify-content center
+    align-items center
+
+cursor()
+    cursor pointer
+
+test()
+    border 1px solid skyblue
+
+// 上箭头
+triangle-top($w, $h, $color)
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 $w $h $w;
+    border-color: transparent transparent $color transparent;
+
+// 下箭头
+triangle-down($w, $h, $color)
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $h $w 0 $w;
+    border-color: $color transparent transparent transparent;
+
+// 右箭头
+triangle-right($w, $h, $color)
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $w 0 $w $h;
+    border-color: transparent transparent transparent $color;
+
+// 左箭头
+triangle-left($w, $h, $color)
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $w $h $w 0;
+    border-color: transparent $color transparent transparent;
+
+bgline()
+    background url("~@img/template2/home/bg/fenlei.png") bottom / 100% 1px no-repeat
+
+
+// 下脚摆动
+wobble-bottom()
+    @extend .hvr-wobble-bottom
+
+// 先放大后缩小
+hvr-pop()
+    @extend .hvr-pop
+
+// 放大
+hvr-grow()
+    @extend .hvr-grow
+
+// 放大-阴影
+hvr-float-shadow()
+    @extend .hvr-float-shadow
+
+// 向上移动 一直跳动
+hvr-bob()
+    @extend .hvr-bob
+
+// 向上移动 一直跳动
+hvr-bob2()
+    @extend .hvr-bob2
+
+
+// 向上移动
+hvr-float()
+    @extend .hvr-float
+
+// 放大 闪动
+hvr-pulse-grow()
+    @extend .hvr-pulse-grow
+
+
+// 淡入
+fadeIn()
+    @extends .animate__animated, .animate__fadeIn
+
+// 淡出
+fadeOut()
+    @extends .animate__animated, .animate__fadeOut
+
+// 上下跳动
+animate__bounce()
+    @extends .animate__animated , .animate__bounce
+
+// 左侧切入
+animate__bounceInLeft()
+    @extends .animate__animated , .animate__bounceInLeft
+
+// 左侧切入
+animate__bounceInRight()
+    @extends .animate__animated , .animate__bounceInRight
+
+// 从上切入 --- 弹框框进入动效
+animate__dialogFadeInDownBig()
+    @extends .animate__animated , .animate__dialogFadeInDownBig
+
+// 从上往下移出 --- 弹框框移出动效
+animate__dialogFadeOutDownBig()
+    @extends .animate__animated , .animate__dialogFadeOutDownBig
+
+// 从上往下移出 --- 弹框框移出动效
+animate__dialogFadeOutDownBig()
+    @extends .animate__animated , .animate__dialogFadeOutDownBig
+
+// 放大
+big()
+    transform scale(1.02)
+
+// 放大 阴影
+bigShadow()
+    transform scale(1.02)
+    box_shadow(shadow01)
+

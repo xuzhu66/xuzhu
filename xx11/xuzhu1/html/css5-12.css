@@ -1,0 +1,35 @@
+img#tup{
+    
+    width: 200px;
+    height: 100px;
+    
+}
+div ul li{
+    list-style: none;
+    float: left;
+    margin:-40px 40px 0px 0px;
+    padding: 10px  7px;
+}
+*{
+    margin: 0;
+    margin-left:15 ;
+
+}
+.zcdl{
+    margin:-46px 160px;
+    font-size: 22;
+    border-style: solid;
+   }
+.zcdl1{
+    margin: -46px 0px 0px 221px;
+    font-size: 22;
+    border-style: solid;
+}
+#lanmu1{
+    margin: 25;
+    border: 1px solid black;
+    
+    
+}
+
+

@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* div {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    transform: translate(100px, 100px);
+} */
+
+img {
+    /* x，y平移 */
+    /* transform: translate(100px, 100px); */
+    /* 旋转定位 ,放大缩小定位*/
+    /* transform-origin: right top; */
+    /* 过度 */
+    transition: all 1s;
+}
+
+img:hover {
+    /* 放大缩小 */
+    /* transform: scale(2, 2); */
+    /* transform: scale(0.5, 0.5); */
+    /* 旋转 */
+    /* transform: rotate(160deg); */
+    /* 移动，旋转，放大（移动要放最前面） */
+    transform: translate(150px) rotate(190deg) scale(1.3);
+}

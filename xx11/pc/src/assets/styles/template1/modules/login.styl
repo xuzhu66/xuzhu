@@ -1,0 +1,119 @@
+@import "../themes/mixin.styl"; //引入配置
+
+.v-l-list
+    li
+        margin-bottom 5px
+
+        &:last-child
+            margin-bottom 5px
+
+        .v-l-d
+            display flex
+            justify-content space-between
+            border_com(1px, solid, border36, bottom)
+            padding-bottom 5px
+
+            input
+                padding-left: 0px
+                width: 100%
+
+.vlog-inp
+    width 100%
+
+    input
+        padding-left: 0px
+        width: 100%
+
+.log-close
+    width 10%
+    display flex
+    justify-content center
+    align-items center
+    cursor pointer
+
+    svg
+        border_all(2px, solid, border37)
+        font_color(fc042)
+        padding 3px
+        width 22px
+        height 22px
+        border-radius 50%
+
+.log-eye
+    width 10%
+    display flex
+    justify-content center
+    align-items center
+
+    svg
+        font_color(fc042)
+        width 24px
+        height 24px
+
+.vlog-togo
+    font-size 14px
+    font_color(fc064)
+    text-align right
+    line-height 16px
+    margin-top: -20px
+    cursor pointer
+
+.vlog-errprom
+    color #c33801
+    height 20px;
+    line-height 20px
+    padding 5px 0px
+
+.vlog-butwrap
+    margin 20px 0px 10px
+
+.reg-logfont
+    font-size: 14px
+    font_color(fc064)
+    text-align: center
+    margin: 10px auto
+    line-height: 40px
+    cursor pointer
+
+.vlg-qmeun
+    text-align center
+
+    span
+        font-size: 14px;
+        font_color(fc063)
+        padding 0px 22px
+        line-height 40px
+        cursor pointer
+
+        &:nth-child(2)
+            position relative
+
+            &:after
+                content: "";
+                left -3px
+                top: 3px;
+                border_com(1px, solid, border35, right)
+                height: 12px;
+                position absolute
+
+.vlog-tit
+    width 320px
+    margin 0 auto
+    font-size 23px
+    font_color(fc012)
+    font-weight bold
+    padding 45px 0px 45px 0px
+    display flex
+    justify-content space-between
+
+    p
+        width auto
+        cursor pointer
+        padding-bottom: 10px
+
+    .vlog-titcur
+        font_color(fc065)
+        border_com(1px, solid, border38, bottom)
+
+.pth50
+    padding-top 50px

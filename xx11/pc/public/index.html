@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="theme1" versionData="0322v1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+    <meta name="google" content="notranslate" />
+    <title></title>
+    <script type="text/javascript" src="/static/api_config.js"></script>
+  </head>
+  <body time="<%= htmlWebpackPlugin.options.time %>">
+    <noscript>
+      <strong>We're sorry but doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <script>
+      let has = window.location.hash,
+          sc = window.location.search
+      if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+       if((window.location.protocol+"//"+ window.location.host + window.location.pathname).substring((window.location.protocol+"//"+ window.location.host + window.location.pathname).length-1) == '/'){
+          if((window.location.protocol+"//"+ window.location.host + window.location.pathname).indexOf('/m/')<0){
+            location.href = (window.location.protocol+"//"+ window.location.host + window.location.pathname)+'m/' + has + sc;
+          }
+       }else{
+          if((window.location.protocol+"//"+ window.location.host + window.location.pathname).indexOf('/m')<0){
+            location.href = (window.location.protocol+"//"+ window.location.host + window.location.pathname)+'m/' + has + sc;
+          }
+       }
+      }else{
+        if((window.location.protocol+"//"+ window.location.host + window.location.pathname).indexOf('/m/')>0){
+          location.href = (window.location.protocol+"//"+ window.location.host + window.location.pathname).replace('/m/', '/'+ has + sc);
+        }
+      }
+
+      // 判断是否支持webp格式图片 支持:返回true  不支持:返回false
+      function supportWebp(){
+          let webpTestsUri = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=';
+          let image = new Image();
+          function addResult(event) {
+              // 如果触发该事件的来源是“onload”并且图片的宽度是1，说明支持webp，否则，不支持webp
+              window.isSupportWebp = event && event.type === 'load' ? image.width == 1 : false;
+          }
+          image.onerror = addResult;
+          image.onload = addResult;
+          image.src = webpTestsUri;
+      }
+      supportWebp();
+
+    </script>
+  </body>
+</html>

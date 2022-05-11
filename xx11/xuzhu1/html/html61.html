@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            position: relative;
+            width: 20px;
+            height: 20px;
+        }
+        
+        img {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <span>X</span><img src="../html/委屈.webp" alt="">
+    <script>
+        var pp = document.querySelector('span');
+        var ll = document.querySelector('img')
+        pp.onclick = function() {
+            ll.style.display = 'none';
+            pp.style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

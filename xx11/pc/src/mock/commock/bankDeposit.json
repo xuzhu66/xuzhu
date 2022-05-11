@@ -1,0 +1,42 @@
+{
+    "code": 200,
+    "success": true,
+    "data": {
+        "success": true,
+        "message": "下单成功",
+        "device": 2,
+        "payModeId": 2,
+        "thirdOrderNo": "20210621003704000283",
+        "payAmount": 906,
+        "payUrl": "",
+        "payInfo": {
+            "id": "1406652329984413698",
+            "createTime": "2021-06-21 00:37:04",
+            "modifyTime": "2021-06-21 00:37:04",
+            "version": "",
+            "deleted": false,
+            "depositorName": "钱凯",
+            "depositMsg": "",
+            "receivedName": "杨福安",
+            "receivedBankCard": "6228481379477516972",
+            "receivedBankName": "中国农业银行",
+            "receivedSubBankName": "",
+            "tenantPlatId": 2,
+            "amount": "",
+            "payTypeGroupName": ""
+        },
+        "orderDepositId": "1406652327623020546",
+        "orderAmt": "",
+        "virOrderAmt": "",
+        "currency": "",
+        "virCurrency": "",
+        "protocol": "",
+        "unitPrice": "",
+        "recAcctNo": "",
+        "payTypeGroupName": "网银转账"
+    },
+    "msg": "操作成功"
+}
+
+
+

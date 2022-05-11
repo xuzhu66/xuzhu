@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes dhp {
+    0% {}
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+section {
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+div {
+    transform-style: preserve-3d;
+    animation: dhp 5s linear infinite;
+}
+
+div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 200px 40%;
+    width: 300px;
+    height: 200px;
+    transform: translateZ(100px);
+}
+
+section div img.a {
+    transform: translateZ(300px);
+}
+
+section div img.b {
+    transform: rotateY(60deg) translateZ(300px);
+}
+
+section div img.c {
+    transform: rotateY(120deg) translateZ(300px);
+}
+
+section div img.d {
+    transform: rotateY(180deg) translateZ(300px);
+}
+
+section div img.e {
+    transform: rotateY(240deg) translateZ(300px);
+}
+
+section div img.f {
+    transform: rotateY(300deg) translateZ(300px);
+}

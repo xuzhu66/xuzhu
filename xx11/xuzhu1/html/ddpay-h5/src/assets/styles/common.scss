@@ -1,0 +1,408 @@
+@import "src/assets/styles/var";
+
+
+$font-weight-base: 500;
+$font-weight-md: 600;
+$font-weight-lg: 700;
+
+$border-color-base: #F6F7FD;
+
+$font-size-30: 30px;
+$font-size-28: 28px;
+$font-size-26: 26px;
+$font-size-24: 24px;
+$font-size-22: 22px;
+$font-size-20: 20px;
+$font-size-28: 18px;
+$font-size-16: 16px;
+$font-size-15: 15px;
+$font-size-14: 14px;
+$font-size-12: 12px;
+
+$color-important1: #333333;
+$color-important2: #486BF6;
+$color-important3: #A1A0A0;
+$color-important4: #FF6666;
+
+$border-radius-8: 8px;
+
+@each $var in (left, center, right) {
+  .text-#{$var} {
+    text-align: $var;
+  }
+}
+
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+
+// flex
+@mixin flex($direction: row, $wrap: nowrap, $type: null) {
+  display: flex;
+  @if ($direction == row or $direction == column) {
+    flex-direction: $direction;
+  } @else {
+    flex-direction: row;
+  }
+
+  flex-wrap: $wrap;
+
+  @if ($type == bt or $direction == bt) {
+    justify-content: space-between;
+  } @else if($type == btc or $direction == btc) {
+    justify-content: space-between;
+    align-items: center;
+  } @else if($type == ac or $direction == ac) {
+    align-items: center;
+  } @else if($type == jc or $direction == jc) {
+    justify-content: center;
+  } @else if($type == center or $direction == center) {
+    justify-content: center;
+    align-items: center;
+  } @else if ($type == ard or $direction == ard) {
+    justify-content: space-around;
+  } @else if ($type == ard or $direction == arc) {
+    justify-content: space-around;
+    align-items: center;
+  }
+  @content;
+}
+
+.row {
+  @include flex;
+}
+
+.col {
+  @include flex(column);
+}
+
+.bt {
+  @include flex(bt);
+}
+
+.btc {
+  @include flex(btc);
+}
+
+.ac {
+  @include flex(ac);
+}
+
+.jc {
+  @include flex(jc);
+}
+
+.ard {
+  @include flex(ard);
+}
+
+.arc {
+  @include flex(arc);
+}
+
+.center {
+  @include flex(center);
+}
+
+.fz12{
+  font-size: 12px;
+}
+.fz14{
+  font-size: 14px;
+}
+.fz15{
+  font-size: 15px;
+}
+.fz16{
+  font-size: 16px;
+}
+.fz18{
+  font-size: 18px;
+}
+.fz20{
+  font-size: 20px;
+}
+.fz22{
+  font-size: 22px;
+}
+.fz24{
+  font-size: 24px;
+}
+.fz26{
+  font-size: 26px;
+}
+.fz28{
+  font-size: 28px;
+}
+.fz30{
+  font-size: $font-size-30;
+}
+.fw500{
+  font-weight: 500;
+}
+.fw600{
+  font-weight: 600;
+}
+.fw700{
+  font-weight: 700;
+}
+.flex1{
+  flex: 1;
+}
+.fontF6{
+  color: #486BF6;
+}
+.font333{
+  color: #333;
+}
+.fontA1A{
+  color: #A1A0A0;
+}
+/* 文字居中，左右显示 */
+.text-align-center{
+  text-align: center;
+}
+.text-align-left{
+  text-align: left;
+}
+.text-align-right{
+  text-align: right;
+}
+
+/* 文字省略号显示 -webkit-line-clamp: 2;写在响应容器控制显示的行数*/
+.text-overflow-num{
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-box-orient: vertical;
+}
+/* 定位问题 */
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+/* *flex布局* */
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-center {
+  align-self: flex-center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.self-baseline {
+  align-self: baseline;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+
+/* flex组合 */
+.flex-start-start{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.flex-center-start{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.flex-end-start{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.flex-center-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-center-end{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.flex-start-between{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.flex-center-between{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-end-between{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.flex-center-around{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.flex-column-center-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flex-column-center-start{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.flex-column-center-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.flex-row-wrap{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+//父级设置flex-wrap-between,子级设置flex: 0 0 33%;内容自动填充整个容器且无间隙
+.flex-wrap-between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+//自动换行且自动分布不用设左右间距
+.flex-wrap-between-justify {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+button{
+  border: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.van-dialog {
+  top: 50%;
+}
+.login-bg {
+  background-image: linear-gradient(
+                  45deg,
+                  hsl(228deg 90% 92%) 0%,
+                  hsl(229deg 90% 95%) 18%,
+                  hsl(230deg 91% 97%) 26%,
+                  hsl(0deg 0% 100%) 33%,
+                  hsl(300deg 100% 100%) 39%,
+                  hsl(300deg 100% 100%) 44%,
+                  hsl(0deg 0% 100%) 50%,
+                  hsl(300deg 100% 100%) 56%,
+                  hsl(300deg 100% 100%) 61%,
+                  hsl(0deg 0% 100%) 67%,
+                  hsl(171deg 38% 97%) 74%,
+                  hsl(171deg 38% 93%) 82%,
+                  hsl(171deg 38% 90%) 100%
+  );
+}
+html, body {
+  background-color: var(--ab-page-container-background-color);
+}
+body {
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+}
+html {
+  height: fill-available;
+  height: -webkit-fill-available;
+}
+.lineHeight {
+  height: 1px;
+}
